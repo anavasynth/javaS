@@ -96,12 +96,13 @@ function IsInRange(){
 
 function ChangeBool() {
     let change = prompt("Enter 'true' or 'false'")
-    if(change || !!change){
+    if(change === 'true' || change == 'false'){
+        change = change === 'true';
         if (change){
-            alert("True тепер " + !!change);
+            alert("True тепер " + !change);
         }
         else{
-            alert("False тепер " + !!change);
+            alert("False тепер " + !change);
         }
     }
     else{
