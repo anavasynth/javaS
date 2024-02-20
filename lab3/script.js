@@ -148,6 +148,7 @@ function ChooseTask(number){
             let base = prompt("Введіть число яке потрібно піднести до степені");
             let exponent = prompt("Введіть степінь");
             console.log(pow(base, exponent));
+            break;
         default:
             console.log("Вкажіть завдання від 1 до 6!")
             break;
