@@ -37,17 +37,17 @@ function task3() {
     ];
 
     employees.sort((a, b) => a.name.localeCompare(b.name));
-    console.log(employees);
+    console.table(employees);
 
     let developers = employees.filter(item => item.position === "developer");
-    console.log(developers);
+    console.table(developers);
 
     employees = employees.filter(item => item.age !== 35);
-    console.log(employees);
+    console.table(employees);
 
     let newEmployee = {name: "Victor", age: 17, position: "developer"};
     employees.push(newEmployee);
-    console.log(employees);
+    console.table(employees);
 }
 
 function task4() {
@@ -58,20 +58,20 @@ function task4() {
         {name: "Vasyl", age: 20, course: 3},
         {name: "Mary", age: 19, course: 2},
     ];
-    console.log(students);
+    console.table(students);
 
     students = students.filter(student => student.name !== "Alex");
-    console.log(students);
+    console.table(students);
 
     let newStudent = {name: "Sam", age: 20, course: 3};
     students.push(newStudent);
-    console.log(students);
+    console.table(students);
 
     students.sort((a, b) => b.age - a.age);
-    console.log(students);
+    console.table(students);
 
     let thirdCourse = students.filter(student => student.course === 3);
-    console.log(thirdCourse);
+    console.table(thirdCourse);
 }
 
 function task5() {
@@ -107,11 +107,14 @@ function libraryManagement() {
     ];
 
     function addBook(title, author, genre, pages, isAvailable = true) {
-        return {title: title, author: author, genre: genre, pages, isAvailable: isAvailable};
+        const newBook = {title: title, author: author, genre: genre, pages, isAvailable: isAvailable};
+        books.push(newBook)
+        return newBook;
     }
 
     function removeBook(title){
         books = books.filter(book => book.title !== title);
+        return console.log(books);
     }
 
     function findBooksByAuthor(author) {
@@ -120,23 +123,21 @@ function libraryManagement() {
     }
 
     function toggleBookAvailability(title, isBorrowed) {
-        books = books.map(book => {
-            if (book.title === title) {
-                return { ...book, isAvailable: !isBorrowed };
-            }
-            return book;
-        });
+        const book = books.find((book) => book.title === title);
+        if (book) {
+            book.isAvailable = !isBorrowed;
+        }
     }
 
-    function sortBooksByPages() {
-        return books.sort((a, b) => a.pages - b.pages);
+    function sortBooksByPages(arr) {
+        arr.sort((a, b) => a.pages - b.pages);
     }
 
     function getBooksStatistics() {
-        let countBooks = books.length;
+        let countBooks = books.length + 1;
 
         let availableBooks = books.filter(book => book.isAvailable === true);
-        let countAvailableBooks = availableBooks.length;
+        let countAvailableBooks = availableBooks.length + 1;
 
         let countBorrowedBooks = countBooks - countAvailableBooks;
 
@@ -148,13 +149,13 @@ function libraryManagement() {
             ", середня кількість сторінок у книзі: " + averagePages + ".";
     }
 
-
     return { addBook,
         removeBook,
         findBooksByAuthor,
         toggleBookAvailability,
         sortBooksByPages,
-        getBooksStatistics
+        getBooksStatistics,
+        books
     };
 }
 
@@ -197,7 +198,39 @@ switch (task){
         break;
     case '6':
         console.log("Завдання 6");
-        libraryManagement();
+        const library = libraryManagement();
+
+        //add book
+        let newBook = library.addBook("The Hobbit", "J.R.R. Tolkien", "fantasy", 310);
+        console.log("Added book: " + newBook.title);
+        console.log(library.books);
+
+        //remove book
+        let titleToDelete = "The Great Gatsby";
+        console.log("Removed book: "+ titleToDelete);
+        library.removeBook(titleToDelete);
+
+        //find by author
+        let author = "J.K. Rowling";
+        console.log("Books by author: " + author);
+        console.log(library.findBooksByAuthor(author));
+
+        //Borrowed books
+        console.log("Borrowed books:")
+        library.toggleBookAvailability("Pride and Prejudice", true);
+        library.toggleBookAvailability("The Hobbit", true);
+        library.toggleBookAvailability("1984", true);
+
+        console.table(library.books);
+
+        //sort
+        console.log("Sorted books: ")
+        library.sortBooksByPages(library.books);
+        console.table(library.books);
+
+        //statistic
+        console.log("Statistics:")
+        console.log(library.getBooksStatistics());
         break;
     case '7':
         console.log("Завдання 7");
@@ -206,26 +239,3 @@ switch (task){
     default:
         console.log("Такого задвання не існує!")
 }
-
-/*
-console.log("Завдання 1");
-task1();
-
-console.log("Завдання 2");
-task2();
-
-console.log("Завдання 3");
-task3();
-
-console.log("Завдання 4");
-task4();
-
-console.log("Завдання 5");
-task5();
-
-console.log("Завдання 6");
-libraryManagement();
-
-console.log("Завдання 7");
-task7();
- */
