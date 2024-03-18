@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+    <h1>To do list</h1>
+    <form id="new-task-form">
+        <input
+                type="text"
+                name="new-task-input"
+                id="new-task-input"
+                placeholder="Які у вас плани?" />
+        <input
+                type="submit"
+                id="new-task-submit"
+                value="Add task" />
+    </form>
+</header>
+
+
+
+<main>
+    <section class="task-list">
+
+        <select id="sort-select">
+            <option value="status">Status</option>
+            <option value="deadline">Deadline</option>
+        </select>
+        <h2>Tasks</h2>
+
+        <div id="tasks">
+
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

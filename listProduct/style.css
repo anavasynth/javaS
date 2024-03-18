@@ -1,0 +1,277 @@
+/* CSS для стилізації */
+/* стилізація для зручного відображення */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+.product-list {
+    list-style-type: none;
+    padding: 0;
+    width: 50%;
+    margin: 20px auto;
+}
+.product-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #6a0dad;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+/* Стилі для модального вікна */
+.modal,
+#editModal
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #6a0dad;
+}
+
+.modal-content {
+    background-color: #6a0dad;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 20px;
+    color: white;
+    text-align: center; /* Центрування тексту */
+}
+
+.close,
+#close
+{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стилі для полів вводу та міток */
+label,
+#productImage,
+#productName,
+#productPrice{
+    display: block; /* Розміщення кожного поля на новому рядку */
+    margin-bottom: 10px; /* Відступ між полями */
+    width: 100%; /* Заповнення всієї ширини відведеного блоку */
+    border-radius: 10px;
+}
+
+/* Стилі для кнопки "Додати" у модальному вікні */
+#addProductModalBtn {
+    width: 100%; /* Заповнення всієї ширини відведеного блоку */
+    border-radius: 10px;
+}
+
+#mainForm{
+    background-color: magenta;
+    border-radius: 20px;
+    opacity: 40%;
+    width: 100%;
+    height: 900px;
+}
+
+#addProductBtn{
+    width: 20%; /* Заповнення всієї ширини відведеного блоку */
+    border-radius: 10px;
+    background-color: #6a0dad;
+    color: white;
+    height: 30px;
+    margin: 0 auto; /* Center the list horizontally */
+}
+
+#deleteButton{
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-left: auto; /* Кнопка розташовується праворуч */
+}
+
+#itemName{
+    color: violet;
+    padding: 10px;
+}
+
+#filterInput{
+    margin: 0px auto; /* Center the list horizontally */
+    border-radius: 10px;
+    background-color: #6a0dad;
+    color: white;
+}
+
+#totalPrice{
+    margin: 5px auto; /* Center the list horizontally */
+    color: #6a0dad;
+}
+
+.product-item button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #6a0dad;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-item button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #6a0dad;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 80%;
+    color: violet;
+}
+
+.modal-content input[type="text"],
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#filterInput {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 20%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Анімація для ефекту зникаючого елементу */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Анімація для ефекту з'являючого елементу */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Клас для ефекту зникаючого елементу */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Клас для ефекту з'являючого елементу */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+
+@media (max-width: 870px) {
+    .product-list {
+        width: 90%;
+    }
+    #addProductBtn{
+        width: 20%; /* Заповнення всієї ширини відведеного блоку */
+        border-radius: 10px;
+        background-color: #6a0dad;
+        color: white;
+        height: 50px;
+        margin: 0 auto; /* Center the list horizontally */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        margin-bottom: 5px;
+        max-width: 100%;
+        max-height: 150px;
+        margin-right: 10px;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .itemPrice {
+        margin-top: 5px;
+    }
+}
+

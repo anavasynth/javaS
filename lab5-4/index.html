@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Каталог товарів</h1>
+<form id="productForm">
+    <label for="productName">Назва:</label>
+    <input type="text" id="productName" required><br>
+    <label for="productPrice">Ціна:</label>
+    <input type="number" id="productPrice" required><br>
+    <label for="productQuantity">Кількість:</label>
+    <input type="number" id="productQuantity" required><br>
+    <button type="submit">Додати товар</button>
+</form>
+<input type="text" id="searchInput" placeholder="Шукати по назві...">
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Назва</th>
+        <th>Ціна</th>
+        <th>Кількість</th>
+        <th>Дії</th>
+    </tr>
+    </thead>
+    <tbody id="productTableBody"></tbody>
+</table>
+
+<h2>Orders</h2>
+<form id="orderForm">
+    <label for="orderProductId">ID:</label>
+    <input type="number" id="orderProductId" required><br>
+    <label for="orderQuantity">Кількість:</label>
+    <input type="number" id="orderQuantity" required><br>
+    <button type="submit">Зробити замовлення</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Назва</th>
+        <th>Кількість</th>
+        <th>Загальна сума</th>
+    </tr>
+    </thead>
+    <tbody id="orderTableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>

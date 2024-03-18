@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Список товарів</h1>
+
+<input type="text" id="filterInput" placeholder="Пошук">
+<ul id="productList" class="product-list">
+    <!-- сюди будуть додаватися товари -->
+</ul>
+<p id="totalPrice">Загальна вартість: 0</p>
+
+<button id="addProductBtn">Додати товар</button>
+
+<!-- Модальне вікно додавання -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <label for="productName">Назва товару</label>
+        <input type="text" id="productName">
+        <label for="productPrice">Ціна товару</label>
+        <input type="text" id="productPrice">
+        <label for="productImage">Зображення товару (URL)</label>
+        <input type="text" id="productImage">
+        <button id="addProductModalBtn" onclick="addProduct()">Додати</button>
+    </div>
+</div>
+
+<!-- Модальне вікно редагування -->
+<div id="editModal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <label for="editProductName">Назва товару</label>
+        <input type="text" id="editProductName">
+        <label for="editProductPrice">Ціна товару</label>
+        <input type="text" id="editProductPrice">
+        <button id="saveEditBtn">Зберегти</button>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

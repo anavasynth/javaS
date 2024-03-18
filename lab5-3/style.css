@@ -1,0 +1,57 @@
+#clock {
+    font-size: 3em;
+    margin-top: 50px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-body th,
+.calendar-body td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.calendar-body th {
+    background-color: #f0f0f0;
+}
+
+.calendar-body td {
+    cursor: pointer;
+}
+
+.calendar-body td.current-day {
+    background-color: #f0f0f0;
+}
+.current-day {
+    background-color: lightblue;
+}

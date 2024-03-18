@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="clock"></div>
+
+<div class="container">
+    <h1>Таймер зворотного відліку</h1>
+    <form id="countdownForm">
+        <label for="inputDate">Дата:</label>
+        <input type="date" id="inputDate" required>
+        <label for="inputTime">Час:</label>
+        <input type="time" id="inputTime" required>
+        <button type="submit">Встановити таймер</button>
+    </form>
+    <div id="countdownDisplay"></div>
+</div>
+
+<div class="calendar">
+    <div class="calendar-header">
+        <button id="prevMonth">Попередній місяць</button>
+        <h1 id="currentMonthYear"></h1>
+        <button id="nextMonth">Наступний місяць</button>
+    </div>
+    <div class="calendar-body">
+        <table>
+            <thead>
+            <tr>
+                <th>Пн</th>
+                <th>Вт</th>
+                <th>Ср</th>
+                <th>Чт</th>
+                <th>Пт</th>
+                <th>Сб</th>
+                <th>Нд</th>
+            </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<input type="text" id="selectedDate">
+<p id="result"></p>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
