@@ -210,16 +210,6 @@ label,
     border: 1px solid #ccc;
 }
 
-/* Анімація для ефекту зникаючого елементу */
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 /* Анімація для ефекту з'являючого елементу */
 @keyframes fadeIn {
     from {
@@ -275,3 +265,18 @@ label,
     }
 }
 
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.product-item.fade-out {
+    animation: slideOutRight 0.5s forwards;
+}

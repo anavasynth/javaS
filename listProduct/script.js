@@ -30,13 +30,12 @@ function removeProduct(button) {
     const price = parseFloat(listItem.querySelector('.itemPrice').textContent);
     listItem.classList.add('fade-out'); // Додати клас для анімації зникнення
 
-    setTimeout(() => {
+    listItem.addEventListener('animationend', function() {
         productList.removeChild(listItem);
         totalPrice -= price;
         totalPriceElement.textContent = `Загальна вартість: ${totalPrice} грн`;
-    }, 500); // Затримка перед видаленням елементу (500 мс, як в анімації)
+    }, { once: true });
 }
-
 function editProduct(span) {
     const listItem = span.parentElement;
     const name = listItem.querySelector('#itemName').textContent;
