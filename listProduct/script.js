@@ -36,6 +36,7 @@ function removeProduct(button) {
         totalPriceElement.textContent = `Загальна вартість: ${totalPrice} грн`;
     }, { once: true });
 }
+
 function editProduct(span) {
     const listItem = span.parentElement;
     const name = listItem.querySelector('#itemName').textContent;

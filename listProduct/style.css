@@ -210,7 +210,6 @@ label,
     border: 1px solid #ccc;
 }
 
-/* Анімація для ефекту з'являючого елементу */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -220,21 +219,30 @@ label,
     }
 }
 
-/* Клас для ефекту зникаючого елементу */
-.fade-out {
-    animation: fadeOut 0.5s forwards;
-}
-
-/* Клас для ефекту з'являючого елементу */
 .fade-in {
     animation: fadeIn 0.5s forwards;
 }
 
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: slideOutRight 0.5s forwards;
+}
 
 @media (max-width: 870px) {
     .product-list {
         width: 90%;
     }
+
     #addProductBtn{
         width: 20%; /* Заповнення всієї ширини відведеного блоку */
         border-radius: 10px;
@@ -266,17 +274,4 @@ label,
 }
 
 
-@keyframes slideOutRight {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-}
 
-.product-item.fade-out {
-    animation: slideOutRight 0.5s forwards;
-}
