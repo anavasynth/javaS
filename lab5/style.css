@@ -5,7 +5,6 @@
     border-radius: 50%;
 }
 
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -14,10 +13,8 @@
     height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {display:none;}
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -63,26 +60,5 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-
-
-.circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-#red {
-    background-color: grey;
-}
-
-#yellow {
-    background-color: grey;
-}
-
-#green {
-    background-color: grey;
 }
 
