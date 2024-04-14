@@ -1,0 +1,22 @@
+.node-header {
+    cursor: pointer;
+  background-color: grey;
+  width: 110px;
+  border: 1px solid black;
+  text-align: center;
+  }
+  
+  .node-content {
+    display: none;
+  }
+  
+  .leaf {
+    margin-left: 20px;
+  }
+  .leaf{
+    background: rgba(232, 220, 236, 0.3);
+    width: 110px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
