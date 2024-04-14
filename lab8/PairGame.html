@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="settings">
+    <h2>Налаштування гри</h2>
+    <select id="difficulty">
+        <option value="easy">Легко</option>
+        <option value="normal">Нормально</option>
+        <option value="hard">Важко</option>
+    </select>
+    <button id="new-game-btn">Нова гра</button>
+    <button id="start-game-btn">Почати гру</button>
+</div>
+<div class="game-stats">
+    <p>Час: <span id="timer">0:00</span></p>
+    <p>Рахунок: <span id="score">0</span></p>
+</div>
+
+<section class="memory-game">
+    <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="img/invoker.jpg" alt="Invoker" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="img/invoker.jpg" alt="Invoker" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/void_spirit.png" alt="Void" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/void_spirit.png" alt="Void" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/earthshaker.png" alt="shaker" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/earthshaker.png" alt="shaker" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/ember.jpg" alt="Ember" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/ember.jpg" alt="Ember" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/nevermore.png" alt="Nevermore" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/nevermore.png" alt="Nevermore" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/necrolyte.png" alt="necr" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+    <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/necrolyte.png" alt="necr" />
+        <img class="back-face" src="img/dota.jpg" alt="Dota Badge" />
+    </div>
+</section>
+
+<script src="script1.js"></script>
+</body>
+</html>
