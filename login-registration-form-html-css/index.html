@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email and Password Validation</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<div class="container">
+
+    <form id="signup-form" action="">
+        <header id="head">Sign up</header>
+
+        <div class="field username-field">
+            <div class="input-field">
+                <input type="text" placeholder="Enter your username" class="username" />
+            </div>
+            <span class="error username-error">
+    <i class="bx bx-error-circle error-icon"></i>
+    <p class="error-text">Please enter a valid username</p>
+  </span>
+        </div>
+
+        <div class="field email-field">
+            <div class="input-field">
+                <input type="email" placeholder="Enter your email" class="email" />
+            </div>
+            <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        <div class="field create-password">
+            <div class="input-field">
+                <input
+                        type="password"
+                        placeholder="Create password"
+                        class="password"
+                />
+                <i class="bx bx-hide show-hide"></i>
+            </div>
+            <span class="error password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter atleast 8 charatcer with numbers.
+            </p>
+          </span>
+        </div>
+        <div class="field confirm-password">
+            <div class="input-field">
+                <input
+                        type="password"
+                        placeholder="Confirm password"
+                        class="cPassword"
+                />
+                <i class="bx bx-hide show-hide"></i>
+            </div>
+            <span class="error cPassword-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Password don't match</p>
+          </span>
+        </div>
+        <div class="input-field button">
+            <input type="submit" value="Submit Now" />
+        </div>
+        <button class="switchB" onclick="showSignInForm()">Sign in</button>
+    </form>
+
+    <form id="signin-form" action="">
+        <header>Sign in</header>
+        <div class="field email-field">
+            <div class="input-field">
+                <input type="email" placeholder="Enter your email" class="email" />
+            </div>
+            <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        <div class="field create-password">
+            <div class="input-field">
+                <input
+                        type="password"
+                        placeholder="Enter your password"
+                        class="password"
+                />
+                <i class="bx bx-hide show-hide"></i>
+            </div>
+            <span class="error password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter your password</p>
+          </span>
+        </div>
+        <div class="input-field button">
+            <input type="submit" value="Sign in" />
+        </div>
+        <button class="switchB" onclick="showSignUpForm()">Sign up</button>
+    </form>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
