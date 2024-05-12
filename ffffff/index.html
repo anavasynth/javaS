@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма для внесення транзакцій</title>
+</head>
+<body>
+<form action="insert.php" method="post">
+    <label for="transaction_type">Вид транзакції:</label>
+    <input type="text" name="transaction_type" required><br><br>
+
+    <label for="date">Дата:</label>
+    <input type="date" name="date" required><br><br>
+
+    <label for="amount">Сума:</label>
+    <input type="text" name="amount" required><br><br>
+
+    <label for="department">Відділ:</label>
+    <input type="text" name="department" required><br><br>
+
+    <input type="submit" value="Внести транзакцію">
+</form>
+</body>
+</html>

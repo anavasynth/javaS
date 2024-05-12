@@ -1,0 +1,346 @@
+html {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.auth {
+    width: 35%;
+    margin: auto;
+}
+
+.auth-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.auth-head__button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+    font-weight: lighter;
+}
+
+.auth-head__button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.auth-head__button_active {
+    outline: 1px solid black;
+    border-radius: 20px;
+    background-color: purple;
+    color: white;
+}
+
+.auth-body {
+    margin-top: 20px;
+    background-color: purple;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.register-form-field {
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 3px;
+    width: 450px;
+}
+
+.register-form-field__label {
+    font-size: 24px;
+    min-width: 30%;
+    padding: 10px 0;
+}
+
+.register-form-field__input, #searchQuery {
+    max-width: 50%;
+    font-size: 24px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.register-form-field__input:focus, #searchQuery:focus {
+    border: 1px solid black;
+    outline: none;
+}
+
+.register-form-field__input_valid {
+    border: 3px solid limegreen;
+}
+
+.register-form-field__input_invalid {
+    border: 3px solid red;
+}
+
+.register-form-field-validation {
+    color: red;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.register-form-submit-button {
+
+    font-size: 20px;
+    background-color: white;
+    width: 110px;
+    height: 40px;
+    color: black;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    margin-left: 38%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.register-form-submit-button:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.register-form-submit-button:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+#show-password, #show-confirmPassword, #show-login-password {
+    position: absolute;
+    left: 80%;
+    top: 65%;
+    cursor: pointer;
+}
+
+.loader, .welcome-to-bullshit {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    font-size: 30px;
+}
+
+.header-logo-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.header-welcome {
+    visibility: hidden;
+    margin: 20px;
+}
+
+.logout-button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: purple;
+    width: 100px;
+    color: white;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    background-color: #811981;
+}
+
+.header-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-options__list {
+    list-style: none;
+    padding: 0;
+}
+
+.header-options__list-element {
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    font-size: 20px;
+    margin: 0;
+}
+
+.find-chelix {
+    display: none;
+}
+
+.find-chelix-body {
+    display: none;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:10px 10px;
+}
+
+.find-chelix-body > div {
+    width: 400px;
+    outline: 0px solid black;
+}
+
+.user {
+    display: flex;
+}
+
+.user-data {
+    margin-left: 5px;
+}
+
+.user-data > p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    word-wrap: anywhere;
+}
+
+/*
+.user > img {
+    object-fit: cover;
+}
+*/
+.user-data {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.user-data-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-data p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-data p:first-child {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    background-color: purple;
+    color: white;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    height: 40px;
+    margin-top: 6px;
+    width: 100px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #811981;
+}
+
+.find-chelix-options {
+    display: block;
+    justify-content: start;
+    width: 100px;
+    align-items: center;
+    font-size: 24px;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+select {
+    font-size: 24px;
+}
+
+@media (width <= 768px) {
+    .auth {
+        width: 75%;
+    }
+
+    .register-form-field {
+        flex-direction: column;
+    }
+
+    .register-form-field__input, #search-query {
+        max-width: 100%;
+    }
+
+    #show-password, #show-confirmPassword {
+        top: 60%;
+    }
+
+    .find-chelix-options {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .find-chelix-body {
+        flex-direction: column;
+    }
+
+    .find-chelix-body > div {
+        width: 100%;
+    }
+}
+
+
+@media (width <= 576px) {
+    .auth {
+        width: 90%;
+    }
+
+    .auth-head {
+        flex-direction: column;
+    }
+
+    #show-password, #show-confirmPassword {
+        left:89%;
+    }
+}
